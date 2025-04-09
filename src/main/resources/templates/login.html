@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://juanbuild.cafe24.com/bbs/login.php?url=%2F -->
+<html lang="ko" class=" js  no-overflowscrolling"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="naver-site-verification" content="14f26558278116af7b3323c19868bf9cd0d864d9">
+<title>로그인 | 주안건설</title>
+<link rel="stylesheet" href="juan_files/mobile_shop.css">
+<link rel="stylesheet" href="juan_files/owl.carousel.css">
+<link rel="stylesheet" href="juan_files/style.css">
+<link rel="stylesheet" href="juan_files/style(1).css">
+<link rel="stylesheet" href="juan_files/style(2).css">
+
+<script src="./juan_files/jquery-1.8.3.min.js"></script>
+<script src="./juan_files/common.js"></script>
+<script src="./juan_files/wrest.js"></script>
+<script src="./juan_files/placeholders.min.js"></script>
+<link rel="stylesheet" href="juan_files/font-awesome.min.css">
+<script src="./juan_files/modernizr.custom.70111.js"></script>
+<script src="./juan_files/owl.carousel.min.js"></script>
+</head>
+<body>
+    
+            <div id="hd_tnb">
+        <form name="frmsearch1" action="http://juanbuild.cafe24.com/shop/search.php" onsubmit="return search_submit(this);">
+        </form>
+    </div>
+    <div class="hd_wr">
+        <div id="logo"><a href="http://juanbuild.cafe24.com/"><img src="juan_files/insanlogo02.png" alt="인산농장"></a></div>
+        <div id="category">
+    <div class="ct_wr">
+                <div class="ct_login">
+            <h2>Welcome</h2>
+            <p>로그인을 하시면 더 많은 혜택을 <br>받으실 수 있습니다</p>
+            <ul class="ct-btn">
+                <li><a href="http://juanbuild.cafe24.com/bbs/register.php" class="btn_1">회원가입</a></li>
+                <li><a href="input.html">로그인</a></li>
+            </ul>
+        </div>
+        
+
+       
+    </div>
+</div>
+
+<script>
+$(function (){
+    var $category = $("#category");
+
+    $("#hd_ct").on("click", function() {
+        $category.css("display","block");
+    });
+
+    $("#category .pop_close").on("click", function(){
+        $category.css("display","none");
+    });
+
+    $("button.sub_ct_toggle").on("click", function() {
+        var $this = $(this);
+        $sub_ul = $(this).closest("li").children("ul.sub_cate");
+
+        if($sub_ul.size() > 0) {
+            var txt = $this.text();
+
+            if($sub_ul.is(":visible")) {
+                txt = txt.replace(/닫기$/, "열기");
+                $this
+                    .removeClass("ct_cl")
+                    .text(txt);
+            } else {
+                txt = txt.replace(/열기$/, "닫기");
+                $this
+                    .addClass("ct_cl")
+                    .text(txt);
+            }
+
+            $sub_ul.toggle();
+        }
+    });
+});
+</script>
+        <button type="button" id="hd_sch_open">검색<span class="sound_only"> 열기</span></button>
+
+
+    </div>
+
+    <div id="gnb">
+   <ul>
+        <li class="gnb_1dli" style="z-index:999;">
+        <a href="login.html">로그인</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="input.html">지시</a>
+    </li>
+
+    <li class="gnb_1dli" style="z-index:999">
+        <a href="http://juanbuild.cafe24.com/shop/list.php?ca_id=10" class="gnb_1da gnb_1dam">작업</a>
+    </li>
+    
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="http://juanbuild.cafe24.com/shop/list.php?ca_id=1020">인사</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="http://juanbuild.cafe24.com/shop/list.php?ca_id=1010">기성</a>
+
+    
+
+</li>
+            
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="http://juanbuild.cafe24.com/shop/itemuselist.php">XXXXXX</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="http://juanbuild.cafe24.com/bbs/board.php?bo_table=gallery">XXXXXX</a>
+    </li>
+
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="http://juanbuild.cafe24.com/bbs/board.php?bo_table=notice">공지사항</a>
+    </li>
+
+
+
+    </ul>
+
+</div>
+
+
+
+
+</header>
+<div id="container" class="container">
+   <h1 id="container_title"><span>로그인</span></h1>
+
+<div id="mb_login" class="mbskin">
+    <h1>로그인</h1>
+
+    <form name="flogin" action="http://juanbuild.cafe24.com/bbs/login_check.php" onsubmit="return flogin_submit(this);" method="post" id="flogin">
+    <input type="hidden" name="url" value="%2F">
+
+    <div id="login_frm">
+        <label for="login_id" class="sound_only">아이디<strong class="sound_only"> 필수</strong></label>
+        <input type="text" name="mb_id" id="login_id" placeholder="아이디(필수)" required="" class="frm_input required" maxlength="20">
+        <label for="login_pw" class="sound_only">비밀번호<strong class="sound_only"> 필수</strong></label>
+        <input type="password" name="mb_password" id="login_pw" placeholder="비밀번호(필수)" required="" class="frm_input required" maxlength="20">
+        <div>
+            <input type="checkbox" name="auto_login" id="login_auto_login">
+            <label for="login_auto_login">자동로그인</label>
+        </div>
+      <a href="input.html"> <input type="submit" value="로그인" class="btn_submit"></a>
+    </div>
+
+    
+    <section class="mb_login_join">
+        <h2>회원로그인 안내</h2>
+
+        <div>
+            <a href="http://juanbuild.cafe24.com/bbs/password_lost.php" target="_blank" id="login_password_lost">회원정보찾기</a>
+            <a href="register_form.html">회원 가입</a>
+        </div>
+    </section>
+
+
+    </form>
+
+
+    <!-- 2019-03-20 비회원지움 코드백업해둠 -->
+
+</div>
+
+<script>
+$(function(){
+    $("#login_auto_login").click(function(){
+        if (this.checked) {
+            this.checked = confirm("자동로그인을 사용하시면 다음부터 회원아이디와 비밀번호를 입력하실 필요가 없습니다.\n\n공공장소에서는 개인정보가 유출될 수 있으니 사용을 자제하여 주십시오.\n\n자동로그인을 사용하시겠습니까?");
+        }
+    });
+});
+
+function flogin_submit(f)
+{
+    return true;
+}
+</script>
+
+
+</div><!-- container End -->
+
+<div id="ft">
+    <h2>주안건설 정보</h2>
+    <ul id="ft_link">
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=company">주안건설</a></li>
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=provision">서비스이용약관</a></li>
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=privacy">개인정보 취급방침</a></li>
+    </ul>
+    <div class="ft_wr"> 
+        <div class="ft_con">
+            
+    <ul>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            </ul>
+        </div>
+        <div id="ft_if" class="ft_con">
+            <h3>COMPANY</h3>
+            <strong> 농업회사법인 주안건설 죽림지점</strong>
+            <span>주소 : 경남 함양군 함양읍 삼봉로 292-10</span><br>
+            <span>사업자등록번호 : 712-85-00250</span>
+            <span>대표 : 최종진</span>
+            <span>전화 : 02) 964-8082</span>
+            <span>팩스 :. 02) 963-9990</span>
+            <!-- <span>운영자 주안건설</span><br> -->
+            <span>통신판매업신고번호 : 20빈-경남함양-0025</span>
+            <span>개인정보 보호책임자 : 최성빈</span>
+
+            
+        </div>
+        <div class="copy">Copyright &copy; 2001-2013 농업회사법인 인산농장 죽림지점. All Rights Reserved.  </div>
+
+    </div>
+    <button type="button" id="top_btn"><img src="juan_files/top_btn.png" alt="상단으로"></button>
+    <script>
+    
+    $(function() {
+        $("#top_btn").on("click", function() {
+            $("html, body").animate({scrollTop:0}, '500');
+            return false;
+        });
+    });
+    </script>
+</div>
+
+
+<script src="./juan_files/sns.js"></script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+
+</body></html>

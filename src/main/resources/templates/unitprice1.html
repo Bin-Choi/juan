@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>단가 목록</title>
+</head>
+<body>
+<h2>단가 목록</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>코드</th>
+        <th>이름</th>
+        <th>규격</th>
+        <th>단위</th>
+        <th>자재비</th>
+        <th>노무비</th>
+        <th>경비</th>
+        <th>합계</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="unit : ${unitList}">
+        <td th:text="${unit.code}"></td>
+        <td th:text="${unit.name}"></td>
+        <td th:text="${unit.spec}"></td>
+        <td th:text="${unit.unit}"></td>
+        <td th:text="${unit.materialCost}"></td>
+        <td th:text="${unit.laborCost}"></td>
+        <td th:text="${unit.expense}"></td>
+        <td th:text="${unit.totalCost}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
