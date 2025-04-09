@@ -8,8 +8,8 @@
 
 .main_event li:nth-child(1) a {cursor: default;}
 
-#main_bn2 .owl-next{background:url(./img/nx_btn_3.png) no-repeat 50% 50% #fff;opacity:0.4;display:inline-block;width:50px;height:50px;position:absolute;top:50%;right:0;margin-top:-25px;border-radius:5px 0 0 5px;text-indent:-999px;overflow:hidden}
-#main_bn2 .owl-prev{background:url(./img/pv_btn_3.png) no-repeat 50% 50% #fff;opacity:0.4;display:inline-block;width:50px;height:50px;position:absolute;top:50%;left:0;margin-top:-25px;border-radius:0 5px 5px 0;text-indent:-999px;overflow:hidden;}
+#main_bn2 .owl-next{background:url(static/image/nx_btn_3.png) no-repeat 50% 50% #fff;opacity:0.4;display:inline-block;width:50px;height:50px;position:absolute;top:50%;right:0;margin-top:-25px;border-radius:5px 0 0 5px;text-indent:-999px;overflow:hidden}
+#main_bn2 .owl-prev{background:url(static/image/pv_btn_3.png) no-repeat 50% 50% #fff;opacity:0.4;display:inline-block;width:50px;height:50px;position:absolute;top:50%;left:0;margin-top:-25px;border-radius:0 5px 5px 0;text-indent:-999px;overflow:hidden;}
 #main_bn2 .owl-next:hover,#main_bn2 .owl-prev:hover{opacity:1;}
 
 @media (max-width:  640px){
@@ -124,7 +124,7 @@ filter: none;
 .sct_sns a {display:inline-block;margin:0 4px 0 0}
 .sct_sns button {margin:0 4px 0 0;padding:0;border:0}
 
-.mli_btn button{background:url(img/mainlist_btn.gif) no-repeat; width:30px; height:30px;border:none;text-indent:-9999px}
+.mli_btn button{background:url(static/image/mainlist_btn.gif) no-repeat; width:30px; height:30px;border:none;text-indent:-9999px}
 .mli_btn button.mli_pre{position:absolute;top:0;left:10px}
 .mli_btn button.mli_next{background-position: -33px 0;position:absolute;top:0;right:10px}
 
@@ -279,7 +279,7 @@ filter: none;
 #sct_location {border:1px solid #e9e9e9;background:#f2f5f9;letter-spacing:-4px}
 #sct_location a {display:inline-block;padding:5px 10px;text-decoration:none;letter-spacing:0 !important}
 .sct_here {font-weight:bold}
-.sct_bg {padding-right:13px !important;background:url('img/sct_bg_toright.gif') right 8px no-repeat}
+.sct_bg {padding-right:13px !important;background:url('/static/image/sct_bg_toright.gif') right 8px no-repeat}
 
 /* 상품 목록 카테고리 목록 */
 .sct_ct {text-align:center;width:100%;}
