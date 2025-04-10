@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)http://juanbuild.cafe24.com/bbs/login.php?url=%2F -->
+<html lang="ko" class=" js  no-overflowscrolling"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">
+<meta name="HandheldFriendly" content="true">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="naver-site-verification" content="14f26558278116af7b3323c19868bf9cd0d864d9">
+<title>로그인 | 주안건설</title>
+<link rel="stylesheet" href="juan_files/mobile_shop.css">
+<link rel="stylesheet" href="juan_files/owl.carousel.css">
+<link rel="stylesheet" href="juan_files/style.css">
+<link rel="stylesheet" href="juan_files/style(1).css">
+<link rel="stylesheet" href="juan_files/style(2).css">
+<!--[if lte IE 8]>
+<script src="http://juanbuild.cafe24.com/js/html5.js"></script>
+<![endif]-->
+
+<script src="./juan_files/jquery-1.8.3.min.js"></script>
+<script src="./juan_files/common.js"></script>
+<script src="./juan_files/wrest.js"></script>
+<script src="./juan_files/placeholders.min.js"></script>
+<link rel="stylesheet" href="juan_files/font-awesome.min.css">
+<script src="./juan_files/modernizr.custom.70111.js"></script>
+<script src="./juan_files/owl.carousel.min.js"></script>
+</head>
+<body>
+    
+            <div id="hd_tnb">
+        <form name="frmsearch1" action="http://juanbuild.cafe24.com/shop/search.php" onsubmit="return search_submit(this);">
+        </form>
+    </div>
+    <div class="hd_wr">
+        <div id="logo"><a href="http://juanbuild.cafe24.com/"><img src="juan_files/insanlogo02.png" alt="인산농장"></a></div>
+        <div id="category">
+    <div class="ct_wr">
+                <div class="ct_login">
+            <h2>Welcome</h2>
+            <p>로그인을 하시면 더 많은 혜택을 <br>받으실 수 있습니다</p>
+            <ul class="ct-btn">
+                <li><a href="http://juanbuild.cafe24.com/bbs/register.php" class="btn_1">회원가입</a></li>
+                <li><a href="http://juanbuild.cafe24.com/bbs/login.php?url=%2F">로그인</a></li>
+            </ul>
+        </div>
+        
+
+       
+    </div>
+</div>
+
+<script>
+$(function (){
+    var $category = $("#category");
+
+    $("#hd_ct").on("click", function() {
+        $category.css("display","block");
+    });
+
+    $("#category .pop_close").on("click", function(){
+        $category.css("display","none");
+    });
+
+    $("button.sub_ct_toggle").on("click", function() {
+        var $this = $(this);
+        $sub_ul = $(this).closest("li").children("ul.sub_cate");
+
+        if($sub_ul.size() > 0) {
+            var txt = $this.text();
+
+            if($sub_ul.is(":visible")) {
+                txt = txt.replace(/닫기$/, "열기");
+                $this
+                    .removeClass("ct_cl")
+                    .text(txt);
+            } else {
+                txt = txt.replace(/열기$/, "닫기");
+                $this
+                    .addClass("ct_cl")
+                    .text(txt);
+            }
+
+            $sub_ul.toggle();
+        }
+    });
+});
+</script>
+        <button type="button" id="hd_sch_open">검색<span class="sound_only"> 열기</span></button>
+
+
+    </div>
+
+    <div id="gnb">
+    <ul>
+        <li class="gnb_1dli" style="z-index:999;">
+        <a href="login.html">로그인</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="input.html">지시</a>
+    </li>
+
+    <li class="gnb_1dli" style="z-index:999">
+        <a href="" class="gnb_1da gnb_1dam">작업</a>
+    </li>
+    
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="">인사</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="">기성</a>
+
+
+    
+</li>
+            
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="">XXXXXX</a>
+    </li>
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="">XXXXXX</a>
+    </li>
+
+    <li class="gnb_1dli" style="z-index:999;">
+    	<a href="">공지사항</a>
+    </li>
+
+
+
+    </ul>
+
+</div>
+
+
+
+
+</header>
+<div id="container" class="container">
+   <h1 id="container_title">주안건설 지시</h1>
+
+<div>
+&nbsp;    
+    <form name="fregisterform" id="fregisterform" action="http://www.insanfarm.co.kr/bbs/register_form_update.php" onsubmit="return fregisterform_submit(this);" method="post" enctype="multipart/form-data" autocomplete="off">
+    &nbsp;    <div class="form_02">
+                <li>
+                    <table border="1" width="1104">
+                        <tr>
+                            <td width="2000" height="40">
+                                <p>▣ 지시상태&nbsp;&nbsp;&nbsp;<input type="text" name="dong"  id="reg_mb_id" class="" minlength="3" maxlength="20" readonly="" size="20" value="강북2025-단가-0194">
+ &nbsp;동&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="jibun"  id="reg_mb_id" class="  readonly" minlength="3" maxlength="20" readonly="" placeholder="" size="20">
+ &nbsp;지번&nbsp;&nbsp;▣ 날짜&nbsp;&nbsp;&nbsp;<input type="text" name="date1"  id="reg_mb_id" class="  readonly" minlength="3" maxlength="20" readonly="" placeholder="" size="20">
+&nbsp;~&nbsp;<input type="text" name="date2"  id="reg_mb_id" class="  readonly" minlength="3" maxlength="20" readonly="" placeholder="" size="20">
+ &nbsp;<input type="submit" value="즐겨찾기" id="btn_submit" class="button"   size="20">
+ &nbsp;&nbsp;<input type="submit" value="등록" id="btn_submit"  class="button"   size="20">
+ &nbsp;&nbsp;<input type="submit" value="생성" id="btn_submit"  class="button"   size="20">
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="조회" id="btn_submit" class="button"   size="20">
+</p>
+</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+&nbsp;</li>
+                <li>
+&nbsp;</li>
+                <li>
+&nbsp;</li>
+                <li>
+                    <table border="1" width="1145">
+                        <tr>
+                            <td width="133" bgcolor="#000099" height="30">
+                                <p align="center"><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">지시서 ID</span></font></p>
+</td>
+                            <td width="110" bgcolor="#000099" height="30">
+                                <p align="center"><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">지시날짜</span></font></p>
+</td>
+                            <td width="119" bgcolor="#000099" height="30">
+                                <p align="center"><span style="background-color:rgb(0,0,153);"><font color="white">S</font></span><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">H 담당자</span></font></p>
+</td>
+                            <td width="107" bgcolor="#000099" height="30">
+                                <p align="center"><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">동</span></font></p>
+</td>
+                            <td width="83" bgcolor="#000099" height="30">
+                                <p align="center"><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">지번 </span></font></p>
+</td>
+                            <td width="218" bgcolor="#000099" height="30">                                <p><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">작업내용</span></font></p>
+</td>
+                            <td width="59" bgcolor="#000099" height="30">                                <p><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">&nbsp;&nbsp;&nbsp;상태</span></font></p>
+</td>
+                            <td width="32" bgcolor="#000099" height="30">&nbsp;</td>
+                            <td width="226" bgcolor="#000099" height="30">
+                                <p align="center"><span style="background-color:rgb(0,0,153);"><font color="white"> </font></span><font color="white"><span style="font-family:'留묒? 怨좊뵓','Malgun Gothic',sans-serif; list-style-image:url(''); background-color:rgb(0,0,153);">출</span></font><span style="background-color:rgb(0,0,153);"><font color="white">력</font></span></p>
+</td>
+                        </tr>
+                        <tr>
+                            <td width="133">
+&nbsp;</td>
+                            <td width="110">
+&nbsp;</td>
+                            <td width="119">
+&nbsp;</td>
+                            <td width="107">
+&nbsp;</td>
+                            <td width="83">
+&nbsp;</td>
+                            <td width="218">&nbsp;</td>
+                            <td width="59">&nbsp;</td>
+                            <td width="32">&nbsp;</td>
+                            <td width="226">
+&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td width="133">
+&nbsp;</td>
+                            <td width="110">
+&nbsp;</td>
+                            <td width="119">
+&nbsp;</td>
+                            <td width="107">
+&nbsp;</td>
+                            <td width="83">
+&nbsp;</td>
+                            <td width="218">&nbsp;</td>
+                            <td width="59">&nbsp;</td>
+                            <td width="32">&nbsp;</td>
+                            <td width="226">
+&nbsp;</td>
+                        </tr>
+                    </table>
+                </li>
+                <li>&nbsp;                </li>
+                <li>&nbsp;</li>
+    </div>
+
+    
+
+    
+
+    <div class="btn_top top">
+        &nbsp;    </div>
+    </form>
+
+&nbsp;</div>
+
+
+</div>
+    
+
+    
+
+
+    </form>
+
+    <script>
+    $(function() {
+        $("#reg_zip_find").css("display", "inline-block");
+
+                        // 휴대폰인증
+        $("#win_hp_cert").click(function() {
+            if(!cert_confirm())
+                return false;
+
+            
+            certify_win_open("kcb-hp", "http://juanbuild.cafe24.com/plugin/okname/hpcert1.php");
+            return;
+        });
+            });
+
+    // 인증체크
+    function cert_confirm()
+    {
+        var val = document.fregisterform.cert_type.value;
+        var type;
+
+        switch(val) {
+            case "ipin":
+                type = "아이핀";
+                break;
+            case "hp":
+                type = "휴대폰";
+                break;
+            default:
+                return true;
+        }
+
+        if(confirm("이미 "+type+"으로 본인확인을 완료하셨습니다.\n\n이전 인증을 취소하고 다시 인증하시겠습니까?"))
+            return true;
+        else
+            return false;
+    }
+
+    // submit 최종 폼체크
+    function fregisterform_submit(f)
+    {
+        // 회원 검사
+        if (f.w.value == "") {
+            var msg = reg_mb_id_check();
+            if (msg) {
+                alert(msg);
+                f.mb_id.select();
+                return false;
+            }
+        }
+
+        if (f.w.value == '') {
+            if (f.mb_password.value.length < 3) {
+                alert('비밀번호를 3글자 이상 입력하십시오.');
+                f.mb_password.focus();
+                return false;
+            }
+        }
+
+        if (f.mb_password.value != f.mb_password_re.value) {
+            alert('비밀번호가 같지 않습니다.');
+            f.mb_password_re.focus();
+            return false;
+        }
+
+        if (f.mb_password.value.length > 0) {
+            if (f.mb_password_re.value.length < 3) {
+                alert('비밀번호를 3글자 이상 입력하십시오.');
+                f.mb_password_re.focus();
+                return false;
+            }
+        }
+
+        // 이름 검사
+        if (f.w.value=='') {
+            if (f.mb_name.value.length < 1) {
+                alert('이름을 입력하십시오.');
+                f.mb_name.focus();
+                return false;
+            }
+        }
+
+        
+        // 닉네임 검사
+        if ((f.w.value == "") || (f.w.value == "u" && f.mb_nick.defaultValue != f.mb_nick.value)) {
+            var msg = reg_mb_nick_check();
+            if (msg) {
+                alert(msg);
+                f.reg_mb_nick.select();
+                return false;
+            }
+        }
+
+        // E-mail 검사
+        if ((f.w.value == "") || (f.w.value == "u" && f.mb_email.defaultValue != f.mb_email.value)) {
+            var msg = reg_mb_email_check();
+            if (msg) {
+                alert(msg);
+                f.reg_mb_email.select();
+                return false;
+            }
+        }
+
+        
+        if (typeof f.mb_icon != 'undefined') {
+            if (f.mb_icon.value) {
+                if (!f.mb_icon.value.toLowerCase().match(/.(gif)$/i)) {
+                    alert('회원아이콘이 gif 파일이 아닙니다.');
+                    f.mb_icon.focus();
+                    return false;
+                }
+            }
+        }
+
+        if (typeof(f.mb_recommend) != 'undefined' && f.mb_recommend.value) {
+            if (f.mb_id.value == f.mb_recommend.value) {
+                alert('본인을 추천할 수 없습니다.');
+                f.mb_recommend.focus();
+                return false;
+            }
+
+            var msg = reg_mb_recommend_check();
+            if (msg) {
+                alert(msg);
+                f.mb_recommend.select();
+                return false;
+            }
+        }
+
+        if (!chk_captcha()) return false;
+
+        document.getElementById("btn_submit").disabled = "disabled";
+
+        return true;
+    }
+    </script>
+</div>
+
+
+</div><!-- container End -->
+
+<div id="ft">
+    <h2>주안건설 정보</h2>
+    <ul id="ft_link">
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=company">주안건설</a></li>
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=provision">서비스이용약관</a></li>
+        <li><a href="http://juanbuild.cafe24.com/bbs/content.php?co_id=privacy">개인정보 취급방침</a></li>
+    </ul>
+    <div class="ft_wr"> 
+        <div class="ft_con">
+            
+    <ul>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+</li>
+            </ul>
+        </div>
+        <div id="ft_if" class="ft_con">
+            <h3>COMPANY</h3>
+            <strong> 농업회사법인 주안건설 죽림지점</strong>
+            <span>주소 : 경남 함양군 함양읍 삼봉로 292-10</span><br>
+            <span>사업자등록번호 : 712-85-00250</span>
+            <span>대표 : 최종진</span>
+            <span>전화 : 02) 964-8082</span>
+            <span>팩스 :. 02) 963-9990</span>
+            <!-- <span>운영자 주안건설</span><br> -->
+            <span>통신판매업신고번호 : 20빈-경남함양-0025</span>
+            <span>개인정보 보호책임자 : 최성빈</span>
+
+            
+        </div>
+        <div class="copy">Copyright &copy; 2001-2013 농업회사법인 인산농장 죽림지점. All Rights Reserved.  </div>
+
+    </div>
+    <button type="button" id="top_btn"><img src="juan_files/top_btn.png" alt="상단으로"></button>
+    <script>
+    
+    $(function() {
+        $("#top_btn").on("click", function() {
+            $("html, body").animate({scrollTop:0}, '500');
+            return false;
+        });
+    });
+    </script>
+</div>
+
+
+<script src="./juan_files/sns.js"></script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+$(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+        $(this).css("z-index", count);
+        $(this).css("position", "relative");
+        count = count - 1;
+    });
+});
+</script>
+<![endif]-->
+
+
+
+</body></html>
