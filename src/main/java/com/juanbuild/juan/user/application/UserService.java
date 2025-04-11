@@ -4,6 +4,7 @@ import com.juanbuild.juan.user.domain.User;
 import com.juanbuild.juan.user.domain.UserRole;
 import com.juanbuild.juan.user.domain.policy.PasswordPolicy;
 import com.juanbuild.juan.user.domain.service.UserFinder;
+import com.juanbuild.juan.user.dto.request.NameChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.PasswordChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.UserRequestDto;
 import com.juanbuild.juan.user.dto.response.UserInfoResponseDto;
@@ -35,7 +36,6 @@ public class UserService {
         return UserInfoResponseDto.from(savedUser);
     }
 
-    // TODO: user 존재하지 않을 시 에러 처리
     public UserInfoResponseDto getUserInfo(Long userId) {
         User user = userFinder.getById(userId);
         return UserInfoResponseDto.from(user);
@@ -55,5 +55,13 @@ public class UserService {
 
         String encodedPassword = passwordEncoder.encode(request.getNewPassword());
         user.changePassword(encodedPassword);
+    }
+
+    @Transactional
+    public UserInfoResponseDto changeName(Long userId, NameChangeRequestDto request) {
+        User user = userFinder.getById(userId);
+
+        user.changeName(request.getName());
+        return UserInfoResponseDto.from(user);
     }
 }

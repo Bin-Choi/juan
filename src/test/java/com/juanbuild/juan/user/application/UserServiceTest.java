@@ -4,6 +4,7 @@ import com.juanbuild.juan.user.domain.User;
 import com.juanbuild.juan.user.domain.UserRole;
 import com.juanbuild.juan.user.domain.policy.PasswordPolicy;
 import com.juanbuild.juan.user.domain.service.UserFinder;
+import com.juanbuild.juan.user.dto.request.NameChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.PasswordChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.UserRequestDto;
 import com.juanbuild.juan.user.dto.response.UserInfoResponseDto;
@@ -146,5 +147,20 @@ class UserServiceTest {
         assertThatThrownBy(() -> userService.getUserInfo(userId))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("존재하지 않는 사용자입니다. id=" + userId);
+    }
+
+    @Test
+    void 사용자_이름_변경_성공() {
+        // given
+        Long userId = 1L;
+        User user = User.of("test@example.com", "홍길동", "1234", "testuser", UserRole.ROLE_USER);
+        NameChangeRequestDto request = new NameChangeRequestDto("유재석");
+        given(userFinder.getById(userId)).willReturn(user);
+
+        // when
+        userService.changeName(userId, request);
+
+        // then
+        assertThat(user.getName()).isEqualTo("유재석");
     }
 }

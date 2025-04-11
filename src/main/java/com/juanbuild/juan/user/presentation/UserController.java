@@ -1,6 +1,7 @@
 package com.juanbuild.juan.user.presentation;
 
 import com.juanbuild.juan.user.application.UserService;
+import com.juanbuild.juan.user.dto.request.NameChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.PasswordChangeRequestDto;
 import com.juanbuild.juan.user.dto.request.UserRequestDto;
 import com.juanbuild.juan.user.dto.response.UserInfoResponseDto;
@@ -39,5 +40,13 @@ public class UserController {
         userService.changePassword(userId, request);
 
         return ResponseEntity.ok("password changed");
+    }
+
+    @PatchMapping("/username")
+    public ResponseEntity<?> changeUsername(@RequestBody NameChangeRequestDto request) {
+        Long userId = 1L;
+        UserInfoResponseDto response = userService.changeName(userId, request);
+
+        return ResponseEntity.ok(response);
     }
 }
