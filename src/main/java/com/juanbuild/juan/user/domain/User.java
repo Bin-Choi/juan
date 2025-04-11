@@ -1,4 +1,4 @@
-package com.juanbuild.juan.user.application;
+package com.juanbuild.juan.user.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -56,6 +56,6 @@ public class User {
     }
 
     public static User of(String email, String name, String password, UserRole role) {
-        return builder().email(email).name(name).password(password).role(role).build();
+        return User.builder().email(email).name(name).password(password).role(role).build();
     }
 }

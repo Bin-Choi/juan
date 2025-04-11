@@ -1,4 +1,4 @@
-package com.juanbuild.juan.user.application;
+package com.juanbuild.juan.user.domain;
 
 public enum UserRole {
     ROLE_ADMIN, ROLE_MANAGER, ROLE_USER;
