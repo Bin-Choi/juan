@@ -1,4 +1,4 @@
-package com.juanbuild.juan.user.dto;
+package com.juanbuild.juan.user.dto.response;
 
 import com.juanbuild.juan.user.domain.User;
 import com.juanbuild.juan.user.domain.UserRole;
@@ -9,11 +9,11 @@ import lombok.Getter;
 
 @Getter
 public class UserInfoResponseDto {
-    private Long id;
-    private String name;
-    private String username;
-    private String email;
-    private UserRole role;
+    private final Long id;
+    private final String name;
+    private final String username;
+    private final String email;
+    private final UserRole role;
 
     @Builder(access = AccessLevel.PRIVATE)
     private UserInfoResponseDto(Long id, String name, String username, String email, UserRole role) {

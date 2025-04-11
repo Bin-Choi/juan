@@ -1,4 +1,4 @@
-package com.juanbuild.juan.user.dto;
+package com.juanbuild.juan.user.dto.request;
 
 import lombok.AccessLevel;
 import lombok.Getter;

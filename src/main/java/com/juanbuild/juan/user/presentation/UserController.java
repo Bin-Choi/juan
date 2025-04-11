@@ -1,8 +1,9 @@
 package com.juanbuild.juan.user.presentation;
 
 import com.juanbuild.juan.user.application.UserService;
-import com.juanbuild.juan.user.dto.PasswordChangeRequestDto;
-import com.juanbuild.juan.user.dto.UserInfoResponseDto;
+import com.juanbuild.juan.user.dto.request.PasswordChangeRequestDto;
+import com.juanbuild.juan.user.dto.request.UserRequestDto;
+import com.juanbuild.juan.user.dto.response.UserInfoResponseDto;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,13 @@ public class UserController {
     private final UserService userService;
 
     public UserController(UserService userService) {this.userService = userService;}
+
+    @PatchMapping
+    public ResponseEntity<?> signUp(@RequestBody UserRequestDto request) {
+        UserInfoResponseDto response = userService.createUser(request);
+
+        return ResponseEntity.ok(response);
+    }
 
     @GetMapping("/me")
     public ResponseEntity<?> getMyInfo() {

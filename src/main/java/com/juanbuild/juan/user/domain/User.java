@@ -29,10 +29,11 @@ public class User {
     private String password;
 
     @Builder
-    private User(String email, String name, String password, UserRole role) {
+    private User(String email, String name, String password, String username, UserRole role) {
         this.email = email;
         this.name = name;
         this.password = password;
+        this.username = username;
         this.role = role;
     }
 
@@ -55,7 +56,7 @@ public class User {
         this.password = password;
     }
 
-    public static User of(String email, String name, String password, UserRole role) {
-        return User.builder().email(email).name(name).password(password).role(role).build();
+    public static User of(String email, String name, String password, String username, UserRole role) {
+        return User.builder().email(email).name(name).password(password).username(username).role(role).build();
     }
 }
